@@ -1,7 +1,7 @@
 import pyglet
 
 # Change this variable to adjust window size
-window_width = 1080
+window_width = 1440
 
 # Do not edit these variables
 window_ratio = 16/9
