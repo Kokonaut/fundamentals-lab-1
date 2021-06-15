@@ -64,7 +64,7 @@ dialog_sprite = pyglet.sprite.Sprite(
   batch=batch,
   group=table,
   x=dialog_label.x,
-  y=dialog_label.y
+  y=dialog_label.y-5
 )
 dialog_sprite.scale=0.3
 
