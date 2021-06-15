@@ -5,7 +5,7 @@ pyglet.font.add_file('assets/PressStart2P-Regular.ttf')
 font = pyglet.font.load('Press Start 2P')
 
 # Now we can import labels
-from lab import labels, window_width
+from lab import labels, window_width, dialog_label
 
 window_ratio = 16/9
 window_height = int(window_width / window_ratio)
@@ -57,12 +57,14 @@ button_sprite.scale = 0.25
 
 # Dialog sprite
 dialog_image = pyglet.resource.image('assets/dialog.png')
+dialog_image.anchor_x = dialog_image.width // 2
+dialog_image.anchor_y = dialog_image.height // 2
 dialog_sprite = pyglet.sprite.Sprite(
   dialog_image,
   batch=batch,
   group=table,
-  x=window_width * 0.16,
-  y=window_height * 0.35
+  x=dialog_label.x,
+  y=dialog_label.y
 )
 dialog_sprite.scale=0.3
 
@@ -91,8 +93,8 @@ sprite_elf = pyglet.sprite.Sprite(
   ani,
   group=foreground,
   batch=batch,
-  x=window_width/15,
-  y=window_height/5
+  x=dialog_label.x-200,
+  y=dialog_label.y-200
 )
 sprite_elf.scale = 0.40
 
