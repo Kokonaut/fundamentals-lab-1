@@ -35,8 +35,9 @@ This is going to be our first time setting up your dev environment. After this w
 * Inside of VSCode, go to the top of your window (top of the screen for macs) and click on `Terminal`
 * This should open a new section in VSCode called the terminal
   * You can type in commands here to run programs on your computer
-* Type in `pip3 install pyglet` and hit enter
+* Type in `pip3 install pyglet==1.5.17` and hit enter
   * This should install the game library
+  * IMPORTANT: Make sure that you are downloading Pyglet version 1.5.17! If you download Pyglet 2.x, then the labs will NOT work
 * Next type in `python run.py`
   * `run.py` is the python file we use to start running the game
 * You should see a window open up with some game assets
